@@ -1,2 +1,2 @@
 # LinuxCommandCollection
-linux命令合集
+linux和sql命令合集
