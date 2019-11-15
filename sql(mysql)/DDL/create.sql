@@ -22,3 +22,6 @@ alter table user change username user varchar(40) null;
 
 -- 修改表名
 alter table user rename user_info;
+
+-- 改变位置
+alter table user change user user varchar(40) null after id;
