@@ -15,6 +15,9 @@ select * from user_info order by id desc;
 -- 分页(第10条记录后的10条记录)
 select * from user_info order by id desc limit 10 offset 10;
 
+-- 效率高的分页
+select a.* from user_info a, (select id from user_info where id>10 limit 10 offset 10) b where a.id=b.id;
+
 -- 聚合函数 
 select count(*) num, user from user_info group by user with rollup having count(*)>2;
 
